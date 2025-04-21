@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project for TOP (The Odin Project) designed to help me work on authentication and authorization for web apps.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It is setup in a way where users with accounts (members only!) can see who authored posts that were written, but if you don't have a user account then you're only able to see the post, and not who authored it.
