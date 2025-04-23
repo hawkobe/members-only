@@ -1,0 +1,10 @@
+<h1>Member Post</h1>
+
+<h2><%= @post.title %></h2>
+<p><%= @post.body%></p>
+<p>Penned By: <%= current_user.name if current_user %></p>
+
+
+
+
+<%= render "sign-up" %>
