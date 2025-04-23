@@ -1,8 +1,8 @@
-<% if current_user %>
+<% if user_signed_in? %>
   <h3>Welcome</h3>
   <p><%= current_user.name %>!</p>
 <% end %>
 <%= link_to "Home", posts_path, method: :get %>
-<% if current_user %>
+<% if user_signed_in? %>
   <%= link_to "Create Post", new_post_path %>
 <% end %>

@@ -4,7 +4,13 @@
   <h2>Member's Only Post</h2>
   <% @posts.each do |post| %>
     <h2><%= link_to "#{post.title}", post %></h2>
-    <p>Penned By: <%= post.user.name if current_user %></p>
+    <p> Penned By: 
+      <% if user_signed_in? %>
+        <%= post.user.name %>
+      <% else %>
+        Anonymous
+      <% end %>
+    </p>
   <% end %>
 </div>
 

@@ -2,9 +2,14 @@
 
 <h2><%= @post.title %></h2>
 <p><%= @post.body%></p>
-<p>Penned By: <%= @post.user.name if current_user %></p>
-
-<% if current_user && current_user.id == @post.user_id %>
+<p> Penned By: 
+  <% if user_signed_in? %>
+    <%= @post.user.name %>
+  <% else %>
+    Anonymous
+  <% end %>
+</p>
+<% if user_signed_in? && current_user.id == @post.user_id %>
   <p>You're the guy you say you are</p>
 <% end %>
 
