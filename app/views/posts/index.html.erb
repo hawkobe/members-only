@@ -1,1 +1,11 @@
-<h1>Herein Lies Posts View.</h1>
+<h1>Herein Lie The Anonymous Posts</h1>
+
+<div class="post-card">
+  <h2>Member's Only Post</h2>
+  <% @posts.each do |post| %>
+    <h2><%= link_to "#{post.title}", post %></h2>
+    <p>Penned By: <%= post.user.name if current_user %></p>
+  <% end %>
+</div>
+
+<%= render "sign-up" %>
