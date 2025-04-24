@@ -1,17 +1,22 @@
-<h1>Herein Lie The Anonymous Posts</h1>
-
-<div class="post-card">
-  <h2>Member's Only Post</h2>
-  <% @posts.each do |post| %>
-    <h2><%= link_to "#{post.title}", post %></h2>
-    <p> Penned By: 
-      <% if user_signed_in? %>
-        <%= post.user.name %>
-      <% else %>
-        Anonymous
-      <% end %>
-    </p>
-  <% end %>
+<div class="container p-2">
+  <h1 class="text-xl font-bold">Herein Lie The Anonymous Posts</h1>
+  
+  <h2 class="text-lg font-semibold py-5">Member's Only Posts</h2>
+  
+  <div class="grid grid-cols-4 gap-4">
+    <% @posts.each do |post| %>
+      <div class="border rounded-md max-w-sm p-6 bg-slate-200">
+        <h2 class="text-lg font-bold pb-2 text-center text-zinc-700"><%= link_to "#{post.title}", post %></h2>
+        <p class="text-center text-gray-500"> Penned By:
+          <% if user_signed_in? %>
+            <em><%= post.user.name %></em>
+          <% else %>
+            <em>Anonymous</em>
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <%= render "shared/sign-up" %>

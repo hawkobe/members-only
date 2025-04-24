@@ -8,7 +8,7 @@
 <%= form_with model: @post do |form| %>
   <div class="post-title">
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'border rounded'%>
   </div>
   <div class="post-body">
     <%= form.label :body %><br>

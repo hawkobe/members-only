@@ -3,11 +3,11 @@
     <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
   </div>
 <% else %>
-  <p><strong>Want to see who's been posting?</strong></p>
-  <p><strong>You'll have to either:</strong></p>
+  <p class="pt-6"><strong>Want to see who's been posting?</strong></p>
+  <p class="py-4"><strong>You'll have to either:</strong></p>
   <div class="login-signup">
-    <%= button_to "Sign In", new_user_session_path, method: :get %>
+    <%= button_to "Sign In", new_user_session_path, method: :get, class: 'bg-gray-500 rounded px-2 py-1 text-slate-100 hover:bg-gray-400' %>
     <p>or</p>
-    <%= button_to "Sign Up", new_user_registration_path, method: :get %>
+    <%= button_to "Sign Up", new_user_registration_path, method: :get, class: 'bg-gray-500 rounded px-2 py-1 text-slate-100 hover:bg-gray-400' %>
   </div>
 <% end %>

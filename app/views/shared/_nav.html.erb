@@ -1,8 +1,12 @@
+<div class="max-w p-2 bg-slate-300 flex gap-2">
+  <p class="text-2x1"><%= link_to "Home", posts_path, method: :get %></p>
+  <% if user_signed_in? %>
+    <%= link_to "Create Post", new_post_path %>
+  <% end %>
+</div>
+
 <% if user_signed_in? %>
   <h3>Welcome</h3>
   <p><%= current_user.name %>!</p>
 <% end %>
-<%= link_to "Home", posts_path, method: :get %>
-<% if user_signed_in? %>
-  <%= link_to "Create Post", new_post_path %>
-<% end %>
+
